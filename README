@@ -1,0 +1,6 @@
+This code is licensed under a "Creative Commons - Non Commercial - Share Alike" license.
+
+Copy mibarrio_local.conf.TEMPLATE to mibarrio_local.conf and adjust to your environment.
+Run script/mibarrio_server.pl to test the application.
+
+<codehead@gmail.com>

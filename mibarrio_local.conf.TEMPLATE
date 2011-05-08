@@ -1,0 +1,7 @@
+name MiBarrio
+<Model::DB>
+        schema_class MiBarrio::Object
+        connect_info dbi:mysql:host=localhost;database=mibarrio
+        connect_info mysqluserid
+        connect_info mysqlpassword
+</Model::DB>

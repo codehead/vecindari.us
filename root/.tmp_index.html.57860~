@@ -1,0 +1,16 @@
+<& /comp/header &>
+
+        <div id="pageBody">
+        	Por favor introduzca una direcci&oacute;n
+        	<form action="cerca" method="GET">
+        		<input name="direccion" size="80"/>
+        		<input type="submit" name="btSend" value="Buscar"/>
+       	  	</form>
+       	  	Por ejemplo:
+       	  	<ul>
+       	  		<li><a href="cerca?direccion=passeig+de+gracia+1,+barcelona,+es">passeig de gracia 1, barcelona, es</a></li>
+     	  	</ul>
+        </div>
+
+
+<& /comp/footer &>

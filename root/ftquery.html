@@ -1,0 +1,17 @@
+<%args>
+	$result => undef,
+</%args>
+<%perl>
+my $sql = $c->CGI->param('sql');
+</%perl>
+<body>
+  <div class="body">
+  <form action="ftquery" method="POST">
+  <% $c->CGI->textarea(-name=>'sql',-rows=>10,-cols=>80) %><br/>
+  <input type="submit" name="btSend"/>
+  </form>
+  </div>
+% if($result) {
+  <pre><% $result |h%></pre>
+% }
+</body>

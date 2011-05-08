@@ -1,0 +1,25 @@
+<%args>
+	$data => undef,
+</%args>
+% if($data) {
+%   foreach my $typeid (keys %{$data}) {
+%     my $type = $c->model('DB::Type')->find($typeid);
+<h3><% $type ? $type->name : '' |h%></h3>
+<ul class="poi">
+%     foreach my $point (@{$data->{$typeid}||[]}) {
+<li>
+	<span class="name"><% $point->name %></span>
+	<span class="distance"><% sprintf("%d",0+$point->get_column('dist')) %> metros</span>
+	<div class="tags">
+%       foreach my $subtype ($point->subtypes) {
+		<span><% $subtype->es %></span>
+%       }
+	</div>
+	
+</li>
+%     }
+</ul>
+%   }
+% } else {
+<div class="error">No tenemos registrada informaci&oacute;n de inter&eacute;s para la zona</div>
+% }

@@ -1,0 +1,13 @@
+<%args>
+	$station => undef,
+	$content => undef,
+</%args>
+<h3><% $station->name |h%></h3>
+<div id="air_quality_content">
+% if($content) {
+<% $content %>
+% } else {
+<div class="warning">No se encuentra informaci&oacute;n actualizada</div>
+% }
+</div>
+<a href="<% $station->url %>" target="_blank">Detalle</a>
